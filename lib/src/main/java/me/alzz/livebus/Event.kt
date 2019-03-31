@@ -12,8 +12,14 @@ class Event<T>: ReadOnlyProperty<Any?, Event<T>> {
     @Suppress("UNCHECKED_CAST")
     override fun getValue(thisRef: Any?, property: KProperty<*>): Event<T> {
         name = property.name
-        liveData = LiveBus.get().with(name) as BusLiveData<T>
+        liveData = LiveBus.with<T>(name) as BusLiveData<T>
         return this
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    fun send() {
+        val data = "" as? T ?: return
+        send(data)
     }
 
     fun send(data: T) {

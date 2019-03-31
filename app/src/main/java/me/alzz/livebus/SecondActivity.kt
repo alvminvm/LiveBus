@@ -1,4 +1,4 @@
-package me.alzz.awsl
+package me.alzz.livebus
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-import me.alzz.livebus.R
 
 class SecondActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +14,10 @@ class SecondActivity: AppCompatActivity() {
 
         goBtn.text = "发送通知"
         goBtn.setOnClickListener {
-            Events.addTrans.send("orderId 1")
-            Events.count.send(1)
-            Events.addTrans.send("orderId 2")
-            Events.sticky.send("stick 2")
+            Events.addTrans.send()
+//            Events.count.send(1)
+//            Events.addTrans.send("orderId 2")
+//            Events.sticky.send("stick 2")
         }
 
 //        Events.sticky.sticky(this) {

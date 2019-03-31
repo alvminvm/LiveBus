@@ -1,12 +1,12 @@
-package me.alzz.awsl
+package me.alzz.livebus
 
-import android.arch.lifecycle.Observer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.NonNull
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-import me.alzz.livebus.R
 
+@NonNull
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
